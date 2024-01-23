@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Calculator App</title>
+    <title>Calculator</title>
 </head>
 <body>
     <div class="container">
@@ -16,30 +16,42 @@
                 <div class="mirror"></div>
             </div>
             <div class="screen">
-                <p class="screen-text"> 0 </p>
+                <div class="screen-last screen-text" id="lastOperationScreen"></div>
+                <div class="screen-current result-text" id="currentOperationScreen">0</div>
             </div>
         </div>
-        <div class="keys-box">          
-            <button class="action" id="clear">AC</button>
-            <button class="action" id="delete">C</button>
-            <button class="operator" id="divide">/</button>
-            <button class="operator" id="percentage">%</button>
-            <button class="number" id="seven">7</button>
-            <button class="number" id="eight">8</button>
-            <button class="number" id="nine">9</button>
-            <button class="operator" id="multiply">*</button>
-            <button class="number" id="four">4</button>
-            <button class="number" id="five">5</button>
-            <button class="number" id="six">6</button>
-            <button class="operator" id="subtract">-</button>
-            <button class="number" id="one">1</button>
-            <button class="number" id="two">2</button>
-            <button class="number" id="three">3</button>
-            <button class="operator" id="add">+</button>
-            <button class="number" id="zero">0</button>
-            <button class="operator" id="decimal">.</button>
-            <button class="operator" id="equals">=</button>
+        <div id="powerCntrl">
+
+        </div>
+        <div class="keys-box buttons-grid">          
+            <button class="btn action span-2" id="clearBtn" onclick="this.blur();">AC</button>
+            <button class="btn action span-2" id="deleteBtn"   onclick="this.blur();">C</button>
+
+            <button class="btn operator" onclick="this.blur();" data-operator>÷</button>
+            <button class="btn " id="powerBtn" onclick="powerCntrl();" >ON</button>
+
+            <button class="btn number" onclick="this.blur();" data-number>7</button>
+            <button class="btn number" onclick="this.blur();" data-number>8</button>
+            <button class="btn number" onclick="this.blur();" data-number>9</button>
+            <button class="btn operator" onclick="this.blur();" data-operator>×</button>
+
+            <button class="btn number" onclick="this.blur();" data-number>4</button>
+            <button class="btn number" onclick="this.blur();" data-number>5</button>
+            <button class="btn number" onclick="this.blur();" data-number>6</button>
+            <button class="btn operator" onclick="this.blur();" data-operator>−</button>
+
+            <button class="btn number" onclick="this.blur();" data-number>1</button>
+            <button class="btn number" onclick="this.blur();" data-number>2</button>
+            <button class="btn number" onclick="this.blur();" data-number>3</button>
+            <button class="btn operator" onclick="this.blur();" data-operator>+</button>
+            <button class="btn number" onclick="this.blur();" data-number>0</button>
+            <button class="btn operator" onclick="this.blur();" id="pointBtn">.</button>
+            <button class="btn " onclick="this.blur();" id="equalsBtn">=</button>
         </div>
     </div>
+    <footer>
+        <p class="footer" >&copy; <a class="footer" href="rohitsbhusal.com.np" target="_blank">Rohit Sharma Bhusal</a>  | All rights reserved.</p>
+    </footer>
 </body>
+<script src="script.js"></script>
 </html>
